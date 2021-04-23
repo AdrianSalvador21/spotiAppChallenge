@@ -1,10 +1,9 @@
 <header class="w-100 primary-bg primary-color header-transition">
   <div class="w-100 container main-header">
     <div class="logo-container">
-      <img src="../../../../../assets/images/public/spotify.png">
+      <img alt="spotify-logo" src="../../../../../assets/images/public/spotify.png">
       <div>
         <h3>{{'header.title' | translate}} <span>{{'header.subtitle' | translate}}</span></h3>
-        <!-- <p>{{'header.name' | translate}}</p> -->
       </div>
     </div>
 
@@ -12,7 +11,6 @@
 
     <div class="mt-4 mt-sm-0 options-container">
       <div class="login-header-container">
-        <!-- <span *ngIf="!isLogged" class="mr-3 cursor-pointer" (click)="login()">{{'header.login' | translate}}</span> -->
         <span *ngIf="isLogged" class="mr-3 custom-link cursor-pointer" routerLinkActive="underline-link" routerLink="/dashboard/releases">{{'header.releases' | translate}}</span>
         <span *ngIf="isLogged" class="mr-3 custom-link cursor-pointer" routerLinkActive="underline-link" routerLink="/dashboard/artists">{{'header.artist' | translate}}</span>
         <mat-icon class="cursor-pointer" [matMenuTriggerFor]="menu">face</mat-icon>
@@ -21,7 +19,7 @@
         <button *ngIf="isLogged" mat-menu-item (click)="logout()">{{'header.logout' | translate}}</button>
         <button *ngIf="!isLogged" mat-menu-item (click)="login()">{{'header.login' | translate}}</button>
         <button mat-menu-item (click)="changeLanguage()">{{'header.languageLabel' | translate}}</button>
-        <button mat-menu-item (click)="toggle()">{{'header.colorTitle' | translate}}</button>
+        <button mat-menu-item (click)="toggle()">{{isDarkTheme ? ('header.lightMode' | translate) : ('header.darkMode' | translate)}}</button>
       </mat-menu>
     </div>
   </div>

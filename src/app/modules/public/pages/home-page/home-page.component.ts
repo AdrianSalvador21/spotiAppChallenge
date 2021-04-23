@@ -56,4 +56,8 @@ export class HomePageComponent implements OnInit {
         }
       });
   }
+
+  login() {
+    this.spotifyService.login();
+  }
 }

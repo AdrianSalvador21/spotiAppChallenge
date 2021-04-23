@@ -13,6 +13,7 @@ import {SpotifyService} from '../../../../core/providers/spotify.service';
 export class HeaderComponent implements OnInit, AfterViewChecked {
   public language: validLanguages = 'en';
   public isLogged = false;
+  public isDarkTheme = true;
 
   constructor(public store: Store<AppState>,
               public spotifyService: SpotifyService,
@@ -23,6 +24,7 @@ export class HeaderComponent implements OnInit, AfterViewChecked {
 
   ngAfterViewChecked(): void {
     this.isLogged = !!localStorage.getItem('accessData');
+    this.isDarkTheme = !!localStorage.getItem('selectedTheme') ? localStorage.getItem('selectedTheme') !== 'light' : true;
   }
 
   changeLanguage() {

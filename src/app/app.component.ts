@@ -3,7 +3,6 @@ import {TranslateService} from '@ngx-translate/core';
 import {Store} from '@ngrx/store';
 import {AppState} from './app.reducer';
 import {ActivatedRoute} from '@angular/router';
-import {UsersService} from './core/providers/users.service';
 import {SetAccessDataAction, SetUserDataAction} from './core/actions/user.actions';
 import {SpotifyService} from './core/providers/spotify.service';
 declare const require;
@@ -33,9 +32,9 @@ export class AppComponent implements OnInit {
       });
     }
 
-    this.translateService.setDefaultLang('es');
-    this.translateService.use('es');
-    this.translateService.setTranslation('es', require('../assets/i18n/es.json'));
+    this.translateService.setDefaultLang('en');
+    this.translateService.use('en');
+    this.translateService.setTranslation('en', require('../assets/i18n/en.json'));
     this.store.select('language').subscribe(state => {
       this.language = state;
       this.translateService.use(this.language);

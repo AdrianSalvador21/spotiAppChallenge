@@ -4,6 +4,8 @@
     "subtitle": "Challenge",
     "name": "Adrián Salvador",
     "colorTitle": "Modo oscuro",
+    "darkMode": "Modo oscuro",
+    "lightMode": "Modo claro",
     "englishLabel": "Inglés",
     "spanishLabel": "Español",
     "languageLabel": "Cambiar lenguaje",
@@ -20,19 +22,15 @@
     "cta": "Comenzar ahora"
   },
   "albums": {
-    "title": "Albums"
+    "title": "Álbumes"
   },
   "releases": {
-    "title": "New Releases"
+    "title": "Nuevos Lanzamientos"
   },
   "artists": {
     "title": "Artistas"
   },
   "general": {
     "backButton": "Regresar"
-  },
-  "users": {
-    "title" : "Nuestro equipo",
-    "subtitle": "Buscamos atraer, desarrollar y retener a gente joven y excepcional para poder ofrecerte las mejores soluciones. Cada colaborador es parte de los logros y crecimiento de la empresa."
   }
 }

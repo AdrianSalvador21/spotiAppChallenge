@@ -4,6 +4,8 @@
     "subtitle": "Challenge",
     "name": "Adrián Salvador",
     "colorTitle": "Dark mode",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
     "englishLabel": "English",
     "spanishLabel": "Spanish",
     "languageLabel": "Change language",
@@ -30,9 +32,5 @@
   },
   "general": {
     "backButton": "Back"
-  },
-  "users": {
-    "title" : "Our team",
-    "subtitle": "We seek to attract, develop and retain young and exceptional people in order to offer you the best solutions. Each employee is part of the achievements and growth of the company."
   }
 }
