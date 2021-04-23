@@ -1,0 +1,16 @@
+<div class="container mt-5 albums-container">
+  <div class="w-100">
+    <div class="back-container">
+      <mat-icon (click)="backToArtists()" class="primary-color cursor-pointer">arrow_back</mat-icon>
+      <h3 class="primary-color">{{'albums.title' | translate}}</h3>
+    </div>
+    <div class="album-container">
+      <div class="album-card" *ngFor="let album of albumsList" (click)="goToDetail(album.id)">
+        <img [src]="album?.images[0]?.url" *ngIf="album.images.length !== 0">
+        <img src="../../../../../assets/images/public/cd-preview.jpg" *ngIf="album.images.length === 0">
+        <h4>{{album.name}}</h4>
+        <p>{{album.release_date}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "SpotiApp",
+    "subtitle": "Challenge",
+    "name": "Adrián Salvador",
+    "colorTitle": "Modo oscuro",
+    "englishLabel": "Inglés",
+    "spanishLabel": "Español",
+    "languageLabel": "Cambiar lenguaje",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "artist": "Artistas",
+    "releases": "Lanzamientos",
+    "settings": "Ajustes"
+  },
+  "landing": {
+    "title": "¡Lo mejor de la música",
+    "titleSpan": " que tu quieres, está aquí!",
+    "subtitle": "Mejores musicos, mejores podcast, audiolibros y mucho más...",
+    "cta": "Comenzar ahora"
+  },
+  "albums": {
+    "title": "Albums"
+  },
+  "releases": {
+    "title": "New Releases"
+  },
+  "artists": {
+    "title": "Artistas"
+  },
+  "general": {
+    "backButton": "Regresar"
+  },
+  "users": {
+    "title" : "Nuestro equipo",
+    "subtitle": "Buscamos atraer, desarrollar y retener a gente joven y excepcional para poder ofrecerte las mejores soluciones. Cada colaborador es parte de los logros y crecimiento de la empresa."
+  }
+}

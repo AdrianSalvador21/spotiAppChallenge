@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.app-theme-container {
+  transition: background-color 0.5s;
+  background-color: var(--secondary-bg);
+  min-height: 100vh;
+}
+
+.primary-bg {
+  background-color: var(--primary-bg);
+}
+
+.primary-color {
+  transition: color 0.5s;
+  color: var(--primary-color);
+}
+
+.primary-button-action {
+  padding: 11px 57px;
+  font-size: 16px;
+  border-radius: 7px;
+  background-color: transparent;
+  border: 1px solid #26cb62;
+  color: #26cb62;
+  margin-top: 5px;
+}
+
+.nightish-bg {
+  background-color: #1e222e;
+}
+
+.white-bg {
+  background-color: #fafafa;
+}
+
+.white-color {
+  color: white;
+}
+
+.show-for-mobile {
+  display: none;
+}
+
+.mr-2 {
+  margin-right: 6px;
+}
+
+.mr-3 {
+  margin-right: 11px;
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.btn-close-dialog {
+  position: absolute;
+  color: var(--primary-color);
+}
+
+.dialog-button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+
+.mat-bottom-sheet-container {
+  background-color: var(--third-bg);
+  min-height: 28rem;
+  // padding: 14px 3px !important;
+  padding: 0 !important;
+}
+
+.custom-link:focus, .custom-link:active {
+  outline: none !important;
+}
+
+
+@media only screen and (max-width: 530px) {
+  .show-for-mobile {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 531px) {
+  .mt-sm-8 {
+    margin-top: 8rem !important;
+  }
+}
+
+

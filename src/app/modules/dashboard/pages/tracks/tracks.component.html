@@ -1,0 +1,44 @@
+<div class="container mt-5 tracks-container">
+  <div class="w-100 track-info-container row m-0 mt-3 mt-sm-5">
+    <div class="back-container cursor-pointer" (click)="goToAlbums()">
+      <mat-icon class="primary-color">arrow_back</mat-icon>
+      <p class="primary-color mb-0">{{'general.backButton' | translate}}</p>
+    </div>
+
+    <div class="col-12 track-display" *ngIf="!!playlistData">
+      <div class="track-img-container">
+        <img alt="album-preview" class="cursor-pointer" (click)="goToSpotify(playlistData.external_urls.spotify)" [src]="playlistData?.images[0]?.url"/>
+      </div>
+
+      <div class="track-description-container">
+        <h3 class="cursor-pointer" (click)="goToSpotify(playlistData.external_urls.spotify)">{{playlistData?.name}}</h3>
+        <p *ngIf="tracksType === '1'">{{playlistData?.release_date}}</p>
+        <p *ngIf="tracksType === '1'">{{playlistData?.artists[0].name}}</p>
+        <p *ngIf="tracksType === '2'">{{playlistData?.description}}</p>
+        <p *ngIf="tracksType === '2'">{{playlistData?.followers?.total}} seguidores - {{playlistData?.tracks.total}} canciones</p>
+      </div>
+      <!-- <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:6sFIWsNpZYqfjUpaCgueju&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>-->
+    </div>
+  </div>
+
+  <div class="w-100 track-info-container row mt-3 mt-sm-5 m-0 mb-4" *ngIf="!!playlistTracks">
+    <div *ngFor="let track of playlistTracks" class="track-item-container">
+      <div class="track-detail">
+        <iframe *ngIf="tracksType === '2'" [src]="track.track.uri | domseguro:'https://open.spotify.com/embed?uri='" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe *ngIf="tracksType === '1'" [src]="track.uri | domseguro:'https://open.spotify.com/embed?uri='" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        <div class="track-info ml-2">
+          <h3 class="cursor-pointer" *ngIf="tracksType === '2'" (click)="goToSpotify(track.track.external_urls.spotify)">{{track.track?.name}}</h3>
+          <h3 class="cursor-pointer" *ngIf="tracksType === '1'" (click)="goToSpotify(track.track.external_urls.spotify)">{{track?.name}}</h3>
+          <p *ngIf="tracksType === '2'">{{track.track.artists[0].name}}</p>
+          <p *ngIf="tracksType === '1'">{{track.artists[0].name}}</p>
+        </div>
+      </div>
+
+      <div class="album-detail" *ngIf="tracksType === '2'">
+        <h3>{{track.track?.album.name}}</h3>
+        <p>{{track.track?.album.release_date}}</p>
+      </div>
+    </div>
+  </div>
+</div>

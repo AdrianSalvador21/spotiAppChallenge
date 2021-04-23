@@ -1,0 +1,16 @@
+<div class="container mt-5 albums-container">
+  <div class="w-100">
+    <div class="search-container">
+      <h3 class="primary-color">{{'artists.title' | translate}}</h3>
+      <input class="search-input" type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar Artista"/>
+    </div>
+    <div class="album-container">
+      <div class="album-card cursor-pointer" *ngFor="let artist of artists" (click)="goToAlbums(artist.id)">
+        <img [src]="artist?.images[0]?.url" *ngIf="artist.images.length !== 0">
+        <img src="../../../../../assets/images/public/cd-preview.jpg" *ngIf="artist.images.length === 0">
+        <h4>{{artist.name}}</h4>
+        <!-- <p>{{artist.description}}</p> -->
+      </div>
+    </div>
+  </div>
+</div>

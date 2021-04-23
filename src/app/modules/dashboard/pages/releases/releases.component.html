@@ -1,0 +1,13 @@
+<div class="container mt-5 albums-container">
+  <div class="w-100">
+    <h3 class="primary-color">{{'releases.title' | translate}}</h3>
+    <div class="album-container">
+      <div class="album-card" *ngFor="let playlist of myPlaylists" (click)="goToDetail(playlist.id)">
+        <img [src]="playlist?.images[0]?.url" *ngIf="playlist.images.length !== 0">
+        <img src="../../../../../assets/images/public/cd-preview.jpg" *ngIf="playlist.images.length === 0">
+        <h4>{{playlist.name}}</h4>
+        <p>{{playlist.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
